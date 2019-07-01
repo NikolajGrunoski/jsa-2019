@@ -1,5 +1,5 @@
 var Calculator = (req, res) => {
-    var res = 0;
+    var result = 0;
     switch(req.params.op){
         case 'add':
             result = Number(req.params.a) + Number(req.params.b);
