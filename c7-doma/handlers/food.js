@@ -58,81 +58,76 @@ var UpdateFood = (req, res) => {
         && req.body.name != undefined && req.body.name != "" && req.body.name.length > 0
         && req.body.price != undefined
         && req.body.calories != undefined;
-
-        if(!check){
-            return res.status(400).send('Bad request');
+    
+    if(!check){
+        return res.status(400).send('Bad request');
+    }
+    fs.readFile('./food_list.json', 'utf8', (err, data) => {
+        if(err){
+            return res.send('Could not read file');
         }
-        fs.readFile('./food_list.json', 'utf8', (err, data) => {
+        var jData = JSON.parse(data);
+        for(let i = 0; i < jData.length; i++){
+            if(jData[i].id == req.params.id){
+                jData[i] = req.body;
+                break;
+            }
+        }
+        fs.writeFile('./food_list.json', JSON.stringify(jData), (err) => {
             if(err){
-                return res.send('Could not read file');
-
+                return res.status(500).send('Could not save file');
             }
-            var jData = JSON.parse(data);
-            for(let i = 0; i < jData.length;i++){
-                if(jData[i].id == req.params.id){
-                    jData[i] = req.body;
-                    break;
-                }
-            }
-            fs.writeFile('./food_list.json', JSON.stringify(jData), (err) => {
-                if(err){
-                    return res.status(500).send('Could not save file');
-                }
-                return res.status(200).send('Ok');
-            });
-        });        
-    //res.send('test');
+            return res.status(200).send('OK');
+        });
+    });
 }
 
 var PartialUpdateFood = (req, res) => {
-    var check = req.body.id != undefined && req.body.name != undefined && req.body.name != "" && req.body.name.length > 0
+    var check = (req.body.name != undefined && req.body.name != "" && req.body.name.length > 0)
         || req.body.price != undefined
         || req.body.calories != undefined;
-
-        if(!check && req.body.id != undefined){
-            return res.status(400).send('Bad request');
+    
+    if(!check){
+        return res.status(400).send('Bad request');
+    }
+    fs.readFile('./food_list.json', 'utf8', (err, data) => {
+        if(err){
+            return res.send('Could not read file');
         }
-        fs.readFile('./food_list.json', 'utf8', (err, data) => {
+        var jData = JSON.parse(data);
+        var index = null;
+        for(let i = 0; i < jData.length; i++){
+            if(jData[i].id == req.params.id){
+                index = i;
+                break;
+            }
+        }
+
+        // if(req.body.name != undefined && req.body.name != ""){
+        //     jData[index].name = req.body.name;
+        // }
+
+        // if(req.body.price != undefined && req.body.price != ""){
+        //     jData[index].price = req.body.price;
+        // }
+
+        // if(req.body.calories != undefined && req.body.calories != ""){
+        //     jData[index].calories = req.body.calories;
+        // }
+
+        for(var i in jData[index]){
+            if(req.body[i] != undefined && req.body[i] != ""){
+                jData[index][i] = req.body[i];
+            }
+        }
+
+        fs.writeFile('./food_list.json', JSON.stringify(jData), (err) => {
             if(err){
-                return res.send('Could not read file');
-
+                return res.status(500).send('Could not save file');
             }
-            var jData = JSON.parse(data);
-            var index = null;
-            for(let i = 0; i < jData.length;i++){
-                if(jData[i].id == req.params.id){
-                    //jData[i] = req.body;
-                    index = i;
-                    break;
-                }
-            }
-
-            // if(req.body.name != undefined && req.body.name != ""){
-            //     jData[index].name = req.body.name;
-            // }
-
-            // if(req.body.name != undefined && req.body.name != ""){
-            //     jData[index].price = req.body.name;
-            // }
-
-            // if(req.body.name != undefined && req.body.name != ""){
-            //     jData[index].calories = req.body.name;
-            // }
-
-            for(var i in jData[index]){
-                if(req.body[i] != undefined && req.body[i] != ""){
-                    jData[index[i]] = req.body[i];
-                }
-            }
-
-            fs.writeFile('./food_list.json', JSON.stringify(jData), (err) => {
-                if(err){
-                    return res.status(500).send('Could not save file');
-                }
-                return res.status(200).send('Ok');
-            });
-        });        
-    // res.send('test');
+            return res.status(200).send('OK');
+        });
+    });
 }
 
 var DeleteFood = (req, res) => {
@@ -141,24 +136,22 @@ var DeleteFood = (req, res) => {
             res.send('Could not read file');
             return;
         }
-        jData = JSON.parse(data);
-        var index = null;
         var jData = JSON.parse(data);
-            for(let i = 0; i < jData.length;i++){
-                if(jData[i].id == req.params.id){
-                    index = i;
-                    break;
-                }
+        var index = null;
+        for(let i = 0; i < jData.length; i++){
+            if(jData[i].id == req.params.id){
+                index = i;
+                break;
             }
+        }
         jData.splice(index, 1);
         fs.writeFile('./food_list.json', JSON.stringify(jData), (err) => {
             if(err){
                 return res.status(500).send('Could not save file');
             }
-            return res.status(200).send('Ok');
+            return res.status(200).send('OK');
         });
     });
-    //res.send('test');
 }
 
 

@@ -1,6 +1,7 @@
 var express =  require('express');
 var students = require('./handlers/students');
 var calculator = require('./handlers/calculator');
+var hbs = require('express-hbs');
 
 var api = express();
 
