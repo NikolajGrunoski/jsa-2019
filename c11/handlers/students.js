@@ -1,9 +1,10 @@
-var model = require("../models/students");
+var model = require('../models/students');
 
 var GetStudents = (req, res) => {
     model.GetAll()
     .then(data => {
-        return res.send(data);
+        // return res.send(data);
+        return res.render('students', {students: data});
     })
     .catch(err => {
         return res.send('Error!');
@@ -12,4 +13,4 @@ var GetStudents = (req, res) => {
 
 module.exports = {
     GetStudents
-};
+}
