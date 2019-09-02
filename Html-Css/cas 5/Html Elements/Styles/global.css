@@ -1,0 +1,124 @@
+/*HMTL Element 1 */
+#header1{
+	background-color: #E6EAED;
+	width: 100%;
+	text-align: center; 
+	
+}
+
+a{
+	text-decoration: none;
+}
+
+.log1 img{
+	position: relative;
+}
+
+.log1{
+	text-decoration: none;
+}
+
+
+.menu{
+	padding: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	display: inline-block;
+	margin-top: 10px;
+	color: #656d78;
+	font-weight: 700;
+	position: relative;
+	bottom: 30px;
+
+}
+
+.menu:hover{
+	color: red;
+}
+
+.copy{
+	color: #adb1ba;
+	font-size: 12px;
+	display: inline-block;
+	margin-left: 30px;
+	letter-spacing: 2px;
+	position: relative;
+	bottom: 30px;
+}
+
+
+/*HMTL Element 2 */
+
+div.mohito{
+	width: 458px;
+	height: 344px;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 2px 5px #e3e4e8;
+}
+
+.image{
+	width: 100%;
+	height: 218px;
+	background-image: url("../Asets/images/mojito.jpg");
+}
+
+.discription{
+	width: 100%;
+	height: 126px
+}
+
+.text{
+	width: 60%;
+	border-right: 2px solid #eaedf2;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: inline-block;
+	float: left;
+}
+
+h3{
+	color: darkgray;
+	margin-bottom: 10px;
+
+}
+
+p{
+	color: #cfd3de;
+	font-size: 16px;
+
+}
+
+.download{
+	
+	display: inline;
+	width: 40%;
+	height: 126px;
+
+}
+
+button{
+	text-transform: uppercase;
+	color: white;
+	background-color: #a0d569;
+	border: none;
+	height: 40px;
+	width: 140px;
+	border-radius: 5px;
+
+}
+
+table{
+	font-size: 12px;
+
+
+}
+th{
+	color: #acb2be;
+}
+
+td{
+	color: #737a84;
+}

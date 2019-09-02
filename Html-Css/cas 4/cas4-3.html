@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Internal CSS</title>
+	<style type="text/css">
+		
+		div{
+			width: 75px;
+			height:75px;
+			border: 2px solid black;
+		}
+
+		#red{
+			background-color: red;
+		}
+		#yellow{
+			background-color: yellow;
+		}
+		#blue{
+			background-color: blue;
+			border: 2px solid green;
+		}
+		#green{
+			background-color: green;
+		}
+
+		.top{
+			width: 75px;
+			height:75px;
+			border: 2px solid black;
+
+		}
+
+		.bottom{
+			width: 150px;
+			height:150px;
+			background-color: pink;
+			border: 1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="red" class="top"></div>
+	<div id="yellow" class="top"></div>
+	<div id="blue" class="top"></div>
+	<div id="green" class="top" style="border: 5px solid blue"></div>
+	<div class="bottom"></div>
+	<div class="bottom"></div>
+	<div class="bottom"></div>
+	<div class="bottom"></div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+	background-color: pink;
+	font-size: 22px;
+}
+
+.lista li{
+	list-style: square;
+	color: red;
+}
+
+.lista2 li{
+	list-style: armenian;
+	color: blue;
+}
+
+.lista3 li{
+	list-style: none;
+	color: green;
+}
+
+.meni{
+	list-style: none;
+	background-color: black;
+	padding: 0;
+	/*padding-left: 0;*/
+	margin-top: 40px;
+	margin-bottom: 20px;
+	border: 1px solid black; 
+
+}
+
+.meni li{
+	color: white;
+	background-color: red;
+	margin: 10px;
+	text-align: center;
+	padding: 5px;
+}
