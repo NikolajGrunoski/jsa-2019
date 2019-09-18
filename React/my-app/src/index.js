@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import User from './User'
+import Wrapper from './Wrapper'
 import Heading from './Heading'
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
 
@@ -53,11 +53,11 @@ const Routes = () => {
                 <Route path='/contact' component={Contact} />
                 <Route path='/login' component={Login} />
                 <Route path='/user'
-                    render={(props) => 
-                        
+                    render={(props) =>
+
                         <React.Fragment>
-                            <User {...props}/>
-                            <Heading {...props}/>
+                            <Wrapper />
+                            <Heading />
                         </React.Fragment>
 
                     }
