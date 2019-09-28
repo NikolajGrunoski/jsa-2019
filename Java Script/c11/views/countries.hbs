@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+             {{#each countries}}
+    <div class="container"></div>
+         <h1>Countries of the World</h1>
+         </hr>
+         <div class="countrie-box">
+             <h2 class="name-of-countrie">{{name}}</h2>
+            <a href="/countries/{{id}}" class="countrie__link">Check it out <span class="emoji-right">👉</span></a>
+             <div class="fatcs-and-figures">
+                 <p class="info">President: {{president}}</p>
+                 <p class="info">Land area: {{land}}</p>
+                 <p class="info">Population: {{population}}</p>
+                 <p class="info">Capital and largest city: {{capital}}</p>
+                 <p class="info">History: {{history}}</p>
+             </div>
+
+            
+        </div>
+   </div>
+                  {{/each}}
+</body>
+</html>

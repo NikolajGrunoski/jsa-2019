@@ -1,0 +1,80 @@
+
+[
+    {
+
+      "id":"0",
+      "name":"Argentina",
+      "image":"",
+      "president":"Mauricio Macri (2015)",
+      "land":"1,056,636 sq mi (2,736,690 sq km)",
+      "population":"43,024,374",
+      "capital":"Buenos Aires, 13.528 million",
+      "history":" First explored in 1516 by Juan Diaz de Solis, Argentina developed slowly under Spanish colonial rule. Buenos Aires was settled in 1580; the cattle industry was thriving as early as 1600. Invading British forces were expelled in 1806 and mdash;1807, and after Napoleon conquered Spain (1808), the Argentinians set up their own government in 1810. On July 9, 1816, independence was formally declared."
+    
+    },
+
+    {
+
+        "id":"1",
+        "name":"Colombia",
+        "image":"",
+        "president":"Ivan Duque (Since 2018)",
+        "land":" 401,042 sq mi (1,038,699 sq km)",
+        "population":"47,698,524",
+        "capital":"Bogotá, 10.574 million (2018)",
+        "history":"Colombia has been inhabited by various American Indian peoples since at least 12,000 BCE, including the Muisca, Quimbaya, and the Tairona, along with the Inca Empire that expanded to the southwest of the country. Spaniards arrived in 1499 and by the mid-16th century annexed part of the region, establishing the New Kingdom of Granada, with Santafé de Bogotá as its capital."
+      
+      },
+
+      {
+
+        "id":"2",
+        "name":"Brazil",
+        "image":"",
+        "president":" Michel Temer (2016)",
+        "land":"3,265,059 sq mi (8,456,511 sq km)",
+        "population":"205,716,890 ",
+        "capital":"Brasília, 3,789,000",
+        "history":" Brazil is the only Latin American nation that derives its language and culture from Portugal. The native inhabitants mostly consisted of the nomadic Tupí-Guaraní Indians. Adm. Pedro Alvares Cabral claimed the territory for Portugal in 1500. The early explorers brought back a wood that produced a red dye, pau-brasil, from which the land received its name. Portugal began colonization in 1532 and made the area a royal colony in 1549."
+      
+      },
+
+      {
+
+        "id":"3",
+        "name":"Costa Rica",
+        "image":"",
+        "president":" Luis Guillermo Solís (2014)",
+        "land":"19,560 sq mi (50,660 sq km)",
+        "population":"4,755,234",
+        "capital":"San José, 1.515 million",
+        "history":"Costa Rica was inhabited by an estimated 400,000 Indians when Columbus explored it in 1502. The Spanish conquest began in 1524. The region grew slowly and was administered as a Spanish province. Costa Rica achieved independence in 1821 but was absorbed for two years by Agustín de Iturbide in his Mexican empire. It became a republic in 1848. Except for the military dictatorship of Tomás Guardia from 1870 to 1882, Costa Rica has enjoyed one of the most democratic governments in Latin America."
+      
+      },
+
+      {
+
+        "id":"4",
+        "name":"Cuba",
+        "image":"",
+        "president":"Raúl Castro (2008)",
+        "land":"42,803 sq mi (110,860 sq km)",
+        "population":"11,047,251",
+        "capital":"Havana, 2.116 million",
+        "history":"Arawak (or Taino) Indians inhabiting Cuba when Columbus landed on the island in 1492 died from diseases brought by sailors and settlers. By 1511, Spaniards under Diego Velásquez had established settlements. Havana's superb harbor made it a common transit point to and from Spain."
+      
+      },
+
+      {
+
+        "id":"5",
+        "name":"Chile",
+        "image":"",
+        "president":"Sebastián Piñera (Since 2018)",
+        "land":"289,112 sq mi (748,800 sq km)",
+        "population":"17,789,267",
+        "capital":"Santiago,  6.68 million",
+        "history":"The territory of Chile has been populated since at least 3000 BC. By the 16th century, Spanish conquistadors began to subdue and colonize the region of present-day Chile, and the territory was a colony between 1540 and 1818, when it gained independence from Spain."
+      
+      }
+]
