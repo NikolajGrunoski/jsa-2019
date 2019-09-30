@@ -153,19 +153,96 @@
 
 // Zadaca 4
 
-let broevi= prompt("Enter a number")
-let result = 0;
- 
-
-    for(let i= 0;i < Number(broevi); i++){
-        if( i % 2 === 0){
-            result += i;
-        }
-    }
+// let broevi= prompt("Enter a number")
+// let result = 0;
 
 
-console.log(result)
+//     for(let i= 0;i < Number(broevi); i++){
+//         if( i % 2 === 0){
+//             result += i;
+//         }
+//     }
+
+
+// console.log(result)
 
 
 // Zadaca 5
+
+// function spil() {
+
+//     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+//     let cards = ['srce', 'detelina', 'baklava', 'list'];
+//     let spil = [];
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         for (let j = 0; j < cards.length; j++) {
+
+//             console.log(numbers[i] + ' - ' + cards[j]);
+//             spil.push(numbers[i] + ' - ' + cards[j]);
+//         }
+//     }
+//     return spil
+// }
+
+// spil();
+
+// Zadaca 6
+
+// function print() {
+//     var random = {
+//         k1: "value1",
+//         k2: "value2",
+//         k3: ["value3.0", "value3.1", "value3.2", "value3.3"],
+//         k4: "value4",
+//         k5: "value5",
+//         k6: "value6",
+//         k7: ["value7.0", "value7.1", "value7.2", "value7.3", "value7.4", "value7.5", "value7.6"]
+//     }
+
+//     for (let i = 0; i < random.k3.length; i++) {
+//         console.log(random.k3[0] + '  ' + random.k3[3])
+
+//     }
+//     for (let j = 0; j < random.k7.length; j++) {
+//         console.log(random.k7[0] + '   ' + random.k7[6])
+//     }
+// }
+
+// print();
+
+// function element() {
+
+//     var random = {
+//         k1: "value1",
+//         k2: "value2",
+//         k3: ["value3.0", "value3.1", "value3.2", "value3.3"],
+//         k4: "value4",
+//         k5: "value5",
+//         k6: "value6",
+//         k7: ["value7.0", "value7.1", "value7.2", "value7.3", "value7.4", "value7.5", "value7.6"]
+//     }
+    
+
+//     let first = random.k3[0] + random.k7[0];
+//     let last = random.k3[3] + random.k7[6];
+//     return "The First element are " + first + ' and the last element are ' + last + ' !'
+
+// }
+// element();
+
+
+// Zadaca 7
+
+
+var names = ["Slackbot", "Meto", "Aleksandar", "Dimitar", "Hristijan", "Kocho", "Kristina", "Orce", "Petar", "Riste", "Sanja"];
+
+for(let i = 0; i < names.length; i++){
+    if(names[i].length === 5){
+        console.log(names[i]);
+    }
+}
+
+
+
 
