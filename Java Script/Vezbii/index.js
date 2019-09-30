@@ -222,7 +222,7 @@
 //         k6: "value6",
 //         k7: ["value7.0", "value7.1", "value7.2", "value7.3", "value7.4", "value7.5", "value7.6"]
 //     }
-    
+
 
 //     let first = random.k3[0] + random.k7[0];
 //     let last = random.k3[3] + random.k7[6];
@@ -235,14 +235,72 @@
 // Zadaca 7
 
 
-var names = ["Slackbot", "Meto", "Aleksandar", "Dimitar", "Hristijan", "Kocho", "Kristina", "Orce", "Petar", "Riste", "Sanja"];
+// var names = ["Slackbot", "Meto", "Aleksandar", "Dimitar", "Hristijan", "Kocho", "Kristina", "Orce", "Petar", "Riste", "Sanja"];
 
-for(let i = 0; i < names.length; i++){
-    if(names[i].length === 5){
-        console.log(names[i]);
+// for(let i = 0; i < names.length; i++){
+//     if(names[i].length === 5){
+//         console.log(names[i]);
+//     }
+// }
+
+// Zadaca 8
+
+// let niza = [];
+// var prasanje = prompt('Kolku dolga ke bide nizata?');
+// prasanje = Number(prasanje);
+
+
+// niza.length = prasanje;
+
+// for (let i = 0; i < prasanje; i++) {
+//     let prasanje2 = prompt('Vnesi vrednost!');
+//     prasanje2 = Number(prasanje2);
+//     niza.push(prasanje2);
+
+// }
+
+// console.log(niza);
+
+
+// Zadaca 9
+
+function watch() {
+
+
+    var movies = [
+        {
+            title: "In Bruges",
+            rating: "5 stars",
+            hasWatched: false
+        },
+        {
+            title: "Frozen",
+            rating: "4.5 stars",
+            hasWatched: true
+        },
+        {
+            title: "Mad Max Fury Road",
+            rating: "5 stars",
+            hasWatched: true
+        },
+        {
+            title: "Les Miserables",
+            rating: "3.5 stars",
+            hasWatched: false
+        }
+    ]
+
+    for(let i = 0; i <movies.length; i++){
+        if (movies[i].hasWatched === true) {
+            console.log('I have watched the movie ' + movies[i].title + ' with a rating of ' + movies[i].rating)
+        } else {
+            console.log('I havent watched the movie ' + movies[i].title + ' with a ratig of ' + movies[i].rating)
+        }
     }
+    
+
 }
 
-
+watch();
 
 
