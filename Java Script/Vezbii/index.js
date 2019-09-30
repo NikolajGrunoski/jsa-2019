@@ -201,11 +201,11 @@
 //     }
 
 //     for (let i = 0; i < random.k3.length; i++) {
-//         console.log(random.k3[0] + '  ' + random.k3[3])
+//         console.log(random.k3[0] + '  ' + random.k3.length - 1)
 
 //     }
 //     for (let j = 0; j < random.k7.length; j++) {
-//         console.log(random.k7[0] + '   ' + random.k7[6])
+//         console.log(random.k7[0] + '   ' + random.k7.length -1)
 //     }
 // }
 
@@ -225,8 +225,8 @@
 
 
 //     let first = random.k3[0] + random.k7[0];
-//     let last = random.k3[3] + random.k7[6];
-//     return "The First element are " + first + ' and the last element are ' + last + ' !'
+//     let last = random.k3[random.k3.length -1] + random.k7[random.k7.length -1];
+//     console.log( "The First element are " + first + ' and the last element are ' + last + ' !');
 
 // }
 // element();
@@ -252,10 +252,10 @@
 
 // niza.length = prasanje;
 
-// for (let i = 0; i < prasanje; i++) {
+// for (let i = 0; i < niza.length; i++) {
 //     let prasanje2 = prompt('Vnesi vrednost!');
-//     prasanje2 = Number(prasanje2);
-//     niza.push(prasanje2);
+//     // prasanje2 = Number(prasanje2);
+//     niza[i]=(prasanje2);
 
 // }
 
@@ -264,43 +264,43 @@
 
 // Zadaca 9
 
-function watch() {
+// function watch() {
 
 
-    var movies = [
-        {
-            title: "In Bruges",
-            rating: "5 stars",
-            hasWatched: false
-        },
-        {
-            title: "Frozen",
-            rating: "4.5 stars",
-            hasWatched: true
-        },
-        {
-            title: "Mad Max Fury Road",
-            rating: "5 stars",
-            hasWatched: true
-        },
-        {
-            title: "Les Miserables",
-            rating: "3.5 stars",
-            hasWatched: false
-        }
-    ]
+//     var movies = [
+//         {
+//             title: "In Bruges",
+//             rating: "5 stars",
+//             hasWatched: false
+//         },
+//         {
+//             title: "Frozen",
+//             rating: "4.5 stars",
+//             hasWatched: true
+//         },
+//         {
+//             title: "Mad Max Fury Road",
+//             rating: "5 stars",
+//             hasWatched: true
+//         },
+//         {
+//             title: "Les Miserables",
+//             rating: "3.5 stars",
+//             hasWatched: false
+//         }
+//     ]
 
-    for(let i = 0; i <movies.length; i++){
-        if (movies[i].hasWatched === true) {
-            console.log('I have watched the movie ' + movies[i].title + ' with a rating of ' + movies[i].rating)
-        } else {
-            console.log('I havent watched the movie ' + movies[i].title + ' with a ratig of ' + movies[i].rating)
-        }
-    }
+//     for(let i = 0; i <movies.length; i++){
+//         if (movies[i].hasWatched === true) {
+//             console.log('I have watched the movie ' + movies[i].title + ' with a rating of ' + movies[i].rating)
+//         } else {
+//             console.log('I havent watched the movie ' + movies[i].title + ' with a ratig of ' + movies[i].rating)
+//         }
+//     }
     
 
-}
+// }
 
-watch();
+// watch();
 
 
