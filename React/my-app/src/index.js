@@ -2,11 +2,9 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import Wrapper from './Wrapper'
 import Heading from './Heading'
-import Home from "./Home"
-import About from "./About"
-import Contact from "./Contact"
-import Login from "./Login"
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
+import Home from './Home'
+import Login from './Login'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 const app = document.getElementById('app')
 
@@ -17,15 +15,14 @@ const Menu = () => {
                 <Link to='/'>Home</Link>
             </li>
             <li>
-                <Link to='/about'>About</Link>
+                <Link to='/about'>About us</Link>
             </li>
             <li>
-                <Link to='/contact'>Contact</Link>
+                <Link to='/contact'>Contact us</Link>
             </li>
             <li>
                 <Link to='/login'>Log in</Link>
             </li>
-
             <li>
                 <Link to='/user'>User</Link>
             </li>
@@ -33,11 +30,13 @@ const Menu = () => {
     )
 }
 
+const About = () => {
+    return (<h1>Welcome to my about page!</h1>)
+}
 
-
-
-
-
+const Contact = () => {
+    return (<h1>Welcome to my contact page!</h1>)
+}
 
 const Routes = () => {
     return (
@@ -45,17 +44,18 @@ const Routes = () => {
             <Menu />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/about' component={About} />
-                <Route path='/contact' component={Contact} />
-                <Route path='/login' component={Login} />
-                <Route path='/user'
-                    render={(props) =>
-
+                <Route exact path='/about' component={About} />
+                <Route exact path='/contact' component={Contact} />
+                <Route exact path='/login' component={Login} />
+                <Route
+                    exact
+                    path='/user'
+                    render={() =>
                         <React.Fragment>
-                            <Wrapper />
-                            <Heading />
+                            <Wrapper>
+                                <Heading />
+                            </Wrapper>
                         </React.Fragment>
-
                     }
                 />
             </Switch>
@@ -63,15 +63,13 @@ const Routes = () => {
     )
 }
 
-
-// const Container = () => {
-//     return (
-//         <React.Fragment>
-//             <User />
-//             <Heading />
-//         </React.Fragment>
-//     )
-// }
-// ReactDOM.render(<Container />, app)
+/* const Container = () => {
+    return  (
+        <React.Fragment>
+            <User />
+            <Heading />
+        </React.Fragment>
+    )
+} */
 
 ReactDOM.render(<Routes />, app)

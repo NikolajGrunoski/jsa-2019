@@ -1,19 +1,18 @@
-import React from "react"
+import React from 'react'
 
 class Login extends React.Component {
-    constructor () {
+    constructor() {
         super()
         this.state = {
             username: '',
             password: ''
         }
     }
-    
 
     checkInput = (event) => {
         const inputValue = event.target.value
-        if (event.target.value.indexOf('@') <= 0) {
-            console.log("imas greska u mailot glup!")
+        if (inputValue.indexOf('@') <= 0) {
+            console.log('imas greska u mejlo')
         }
         this.saveInput(event)
     }
@@ -23,20 +22,22 @@ class Login extends React.Component {
     }
 
     saveInput = (event) => {
-        this.setState({[event.target.id] : event.target.value})
+        this.setState({[event.target.id]: event.target.value})
     }
 
     render () {
         return <React.Fragment>
-            <input id="username" placeholder= "Username" 
-            onChange={this.checkInput}
+            <input id='username'
+                placeholder='Username'
+                onChange={this.checkInput}
             />
-            <input id="password" placeholder= "Password"
-            onChange={this.saveInput}/>
+            <input id='password'
+                placeholder='Password' 
+                onChange={this.saveInput}
+            />
             <button id='submit' onClick={this.submit}>Log In!</button>
         </React.Fragment>
     }
-    
 }
 
 export default Login

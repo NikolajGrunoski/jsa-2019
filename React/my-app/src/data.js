@@ -1,16 +1,21 @@
 const data = [
     {
         id: 1,
-        name: 'Niki',
-        email: 'ng24524@seeu.edu.mk'
+        name: 'Koco',
+        email: 'k.n@test.com'
     }, {
         id: 2,
-        name: 'Ciki',
-        email: 'ciki.p@seeu.edu.mk'
+        name: 'Niki',
+        email: 'n@test.com'
     }, {
         id: 3,
-        name: 'Boce',
-        email: 'boki.b@seeu.edu.mk'
+        name: 'Dimitar',
+        email: 'd@test.com'
+    },
+    {
+        id: 4,
+        name: 'Dimitar',
+        email: 'd@test.com'
     }
 ]
 
