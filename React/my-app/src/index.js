@@ -1,10 +1,12 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import Wrapper from './Wrapper'
+import UsersList from './UsersList'
 import Heading from './Heading'
 import Home from './Home'
 import Login from './Login'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import UsersList from './UsersList'
 
 const app = document.getElementById('app')
 
@@ -50,12 +52,9 @@ const Routes = () => {
                 <Route
                     exact
                     path='/user'
-                    render={() =>
-                        <React.Fragment>
-                            <Wrapper>
-                                <Heading />
-                            </Wrapper>
-                        </React.Fragment>
+                    render={() =><Wrapper>
+                        component={UsersList}
+                        url={'https://jsonplaceholder.typicode.com/users'}
                     }
                 />
             </Switch>
@@ -72,4 +71,4 @@ const Routes = () => {
     )
 } */
 
-ReactDOM.render(<Routes />, app)
+ReactDOM.render(<Routes/>, app)
