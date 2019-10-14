@@ -3,9 +3,10 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     devtool: 'source-map',
+    
     output: {
       path: path.resolve(__dirname, 'src'),
-      filename: 'bundle.js',
+      filename: 'bundle.js'
       // publicPath: '/src/'
     },
 

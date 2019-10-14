@@ -1,67 +1,38 @@
 import React from 'react'
-import UsersList from './UsersList'
+import Error from './Error'
 import axios from 'axios'
-import Error from "./Error"
 
 class Wrapper extends React.Component {
-    // let users = []
-    // users = data.map(element => {
-    //     return <User key={element.id} name={element.name} email={element.email} /> 
-    // })
-
-    constructor(props) {
+    constructor (props) {
         super(props)
         this.state = {
-            data: null,
+            data: [],
             error: null,
             loading: false
         }
     }
 
-
-    componentDidMount() {
-        this.setState({loading : true})
-        axios.get('https://jsonplaceholder.typicode.com/users')
-            .then((response) => {
-               this.setState({data: response.data, loading: false})
-            })
-            .catch((error) => {
-                this.setState({ error: <Error/>, loading: false})
-            })
-        
-
+    componentDidMount () {
+        this.setState({ loading: true })
+        axios({
+            method: this.props.methodType,
+            url: this.props.url
+        }).then((response) => {
+            this.setState({ data: response.data, loading: false })
+        })
+        .catch((error) => {
+            this.setState({ error: <Error />, loading: false })
+        })
     }
-
-
-
-
-
-    // componentDidMount() {
-    //     axios.get('https://jsonplaceholder.typicode.com/users')
-    //         .then((response) => {
-    //             const users = response.data.map((element) => {
-    //                 return <User
-    //                     key={element.id}
-    //                     name={element.name}
-    //                     email={element.email} />
-    //             })
-
-    //             this.setState({ data: users })
-    //         })
-    //         .catch((error) => {
-    //             this.setState({ data: <Error /> })
-    //         })
-    // }
-
-    render() {
+    
+    render () {
         return (
             <React.Fragment>
-                <UsersList data={this.state.data}/>
+                <this.props.component data={this.state.data} />
                 {this.state.error}
-                {this.state.loading && <div>LOADING....</div>}
+                {this.state.loading && <div>LOADING...</div>}
             </React.Fragment>
         )
-
     }
 }
 
