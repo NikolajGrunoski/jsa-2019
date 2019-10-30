@@ -36,3 +36,14 @@
     font-weight: 400;
     margin-bottom: 0.25rem;
 }
+
+li {
+    display: inline;
+}
+
+a {
+    color: black;
+    font-style: bolder;
+    padding: 50px;
+}
+

@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
 import { userReducer } from './reducers/userReducer.js'
 import { usersTableReducers } from './reducers/usersTableReducers.js'
+import thunk from 'redux-thunk'
 
 
 
@@ -13,7 +14,7 @@ const singleReducer = combineReducers({
 // Creates an empty store object = {}
 const store = createStore(
     singleReducer,
-    applyMiddleware(logger)
+    applyMiddleware(logger, thunk)
 )
 
 console.log(store.getState())

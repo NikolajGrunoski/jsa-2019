@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { writeUsersToStore, addUserToStore } from './redux/actions/writeUsersToStore'
+import { writeUsersToStore, addUserToStore, removeUserToStore } from './redux/actions/writeUsersToStore'
 import { connect } from 'react-redux'
 import "./style.css"
 
@@ -35,7 +35,7 @@ class Table extends React.Component {
                         <input type='text' id='username' className='form-control' placeholder='username' />
                         <input type='text' id='email' className='form-control' placeholder='email' />
                         <input type='text' id='address' className='form-control' placeholder='address' />
-                        <button id='save' className='btn btn-success' onClick={this.saveUser}>Save</button>
+                        <button id='save' className='btn btn-success' onClick={() => this.saveUser()}>Save</button>
                         <button id='close' className='btn btn-secondary' onClick={() => this.setState({ showModal: null })}>Close</button>
                     </div>
                 </div>
@@ -69,6 +69,11 @@ class Table extends React.Component {
         }
 
         this.props.addUserToStore(newUser)
+        this.setState({ showModal: null })
+    }
+
+    deleteUser = (user) => {
+        this.props.removeUserToStore(user)
     }
 
     render() {
@@ -90,6 +95,9 @@ class Table extends React.Component {
                         <button id='edit' onClick={() => this.editUser(user)} className="btn btn-primary" >
                             Edit
                         </button>
+                        <button id='delete' onClick={() => this.deleteUser(user)} className="btn btn-danger">
+                            Delete
+                        </button>
                     </td>
                 </tr>
             })
@@ -100,9 +108,11 @@ class Table extends React.Component {
                 <thead>
                     <tr>
                         <th>
-                            <button id='add' onClick={this.addUser} className="btn btn-success">
+                            <button id='add' onClick={this.addUser}
+                                className="btn btn-success">
                                 Add new user
                             </button>
+
                         </th>
 
                     </tr>
@@ -127,7 +137,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         writeUsersToStore: (data) => dispatch(writeUsersToStore(data)),
-        addUserToStore: (data) => dispatch(addUserToStore(data))
+        addUserToStore: (data) => dispatch(addUserToStore(data)),
+        removeUserToStore: (data) => dispatch(removeUserToStore(data))
     }
 }
 

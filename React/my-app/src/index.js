@@ -13,23 +13,25 @@ const app = document.getElementById('app')
 
 const Menu = () => {
     return (
-        <ul>
-            <li>
-                <Link to='/'>Home</Link>
-            </li>
-            <li>
-                <Link to='/about'>About us</Link>
-            </li>
-            <li>
-                <Link to='/users_list'>users_list</Link>
-            </li>
-            <li>
-                <Link to='/login'>Log in</Link>
-            </li>
-            <li>
-                <Link to='/user'>User</Link>
-            </li>
-        </ul>
+        <nav className="navbar navbar-dark bg-primary">
+            <ul className="navbar-brand">
+                <li>
+                    <Link to='/'>Home</Link>
+                </li>
+                <li>
+                    <Link to='/about'>About us</Link>
+                </li>
+                <li>
+                    <Link to='/users_list'>users_list</Link>
+                </li>
+                <li>
+                    <Link to='/login'>Log in</Link>
+                </li>
+                <li>
+                    <Link to='/user'>User</Link>
+                </li>
+            </ul>
+        </nav> 
     )
 }
 
